@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+chroma_data/
+chroma_*/
+soc_copilot.db
+*.db
+.pytest_cache/
+.streamlit/secrets.toml
+data/eval_runs/*.jsonl
+eval/results/raw/

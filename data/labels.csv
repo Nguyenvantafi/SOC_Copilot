@@ -1,0 +1,88 @@
+alert_ref,alert_id_raw,rule_id,rule_level,rule_description,source,split,is_kappa_check_sample,expected_sop,rater2_label,agreement_flag,assigned_severity_range,is_true_positive,recommended_action_label,labeler,label_date,notes
+data/samples/100200_1.json,,100200,10,Possible port scan detected: multiple ports scanned from same source in a short period.,curated_ai_or_manual,dev,False,sop_port_scan,,,4_trung-cao,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Quét 12 cổng tới .50 (server quan trọng), firewall DROP. Giả định .10/.20 là máy tấn công lab."
+data/samples/100200_lab_1.json,,100200,10,Possible port scan detected: multiple ports scanned from same source in a short period.,lab_synthetic,dev,False,sop_port_scan,,,4_trung-cao,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Như dòng 1: 16 cổng từ .20 tới .50.
+data/samples/100200_lab_2.json,,100200,10,Possible port scan detected: multiple ports scanned from same source in a short period.,lab_synthetic,test,True,,,,,,,,,
+data/samples/100210_1.json,,100210,12,Web shell command execution detected via HTTP request.,curated_ai_or_manual,test,True,,,,,,,,,
+data/samples/100220_1.json,,100220,10,Multiple failed login attempts to web application from same source ip.,curated_ai_or_manual,test,True,,,,,,,,,
+data/samples/100230_lab_1_1.json,,100230,12,"Suspicious privilege escalation via sudo: sensitive file or sudoers access (DE XUAT rule 100230 - CHUA XAC NHAN trong bo rule that, can Tai/Binh duyet).",lab_synthetic,dev,False,sop_privilege_escalation,,,4_trung-cao,yes,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,sudo đọc /etc/shadow; rule 100230 là đề xuất chưa xác nhận. Đi kèm dòng 7 sau 4 giây.
+data/samples/100230_lab_1_2.json,,100230,12,"Suspicious privilege escalation via sudo: sensitive file or sudoers access (DE XUAT rule 100230 - CHUA XAC NHAN trong bo rule that, can Tai/Binh duyet).",lab_synthetic,dev,False,sop_privilege_escalation,,,5_cao,yes,ISOLATE_HOST,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Tạo sudoers.d NOPASSWD:ALL = duy trì quyền root. SOP không có hành động vô hiệu tài khoản trong 4 nhãn nên chọn ISOLATE_HOST (cần người xác nhận).
+data/samples/100230_lab_2_1.json,,100230,12,"Suspicious privilege escalation via sudo: sensitive file or sudoers access (DE XUAT rule 100230 - CHUA XAC NHAN trong bo rule that, can Tai/Binh duyet).",lab_synthetic,test,True,,,,,,,,,
+data/samples/100230_lab_2_2.json,,100230,12,"Suspicious privilege escalation via sudo: sensitive file or sudoers access (DE XUAT rule 100230 - CHUA XAC NHAN trong bo rule that, can Tai/Binh duyet).",lab_synthetic,test,False,,,,,,,,,
+data/samples/2502_1.json,,2502,10,syslog: User missed the password more than one time,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/2502_2.json,,2502,10,syslog: User missed the password more than one time,raw_pool_sampled,dev,False,sop_ssh_bruteforce,,,4_trung-cao,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"5 lần PAM thất bại liên tiếp từ .10 qua sshd, level 10."
+data/samples/30305_1.json,,30305,5,Apache: Attempt to access forbidden file or directory.,raw_pool_sampled,dev,False,sop_web_bruteforce_scan,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,1 lần bị từ chối .htpasswd_; kiểu dò của scanner.
+data/samples/30305_2.json,,30305,5,Apache: Attempt to access forbidden file or directory.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31101_1.json,,31101,5,Web server 400 error code.,raw_pool_sampled,dev,False,sop_web_bruteforce_scan,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,404 /aux; firedtimes=489 cho thấy quét kéo dài nhưng từng sự kiện chỉ là nhiễu.
+data/samples/31101_2.json,,31101,5,Web server 400 error code.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31103_1.json,,31103,7,SQL injection attempt.,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/31103_2.json,,31103,7,SQL injection attempt.,raw_pool_sampled,dev,False,sop_sqli,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Payload chứa 'userNikto' (chữ ký Nikto), trả 404."
+data/samples/31104_1.json,,31104,6,Common web attack.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31104_2.json,,31104,6,Common web attack.,raw_pool_sampled,dev,False,sop_web_attack_generic,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"/%00 trả 404, dò quét tự động."
+data/samples/31105_1.json,,31105,6,XSS (Cross Site Scripting) attempt.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31105_2.json,,31105,6,XSS (Cross Site Scripting) attempt.,raw_pool_sampled,dev,False,sop_xss,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"XSS thăm dò, 404."
+data/samples/31105_3.json,,31105,6,XSS (Cross Site Scripting) attempt.,raw_pool_sampled,dev,False,sop_xss,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"XSS thăm dò, 404."
+data/samples/31106_1.json,,31106,6,A web attack returned code 200 (success).,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31106_2.json,,31106,6,A web attack returned code 200 (success).,raw_pool_sampled,dev,False,sop_xss,,,3_trung-binh,yes,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"curl thủ công <script> trả 200, kích thước 10926 bằng trang gốc (chưa thấy phản xạ). Chọn SOP theo loại payload (như dòng 25). [rà lại: đổi từ sop_web_attack_generic]"
+data/samples/31106_3.json,,31106,6,A web attack returned code 200 (success).,raw_pool_verbatim_copy,dev,False,sop_sqli,,,3_trung-binh,yes,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"UNION SELECT null trả 200, kích thước 10926 bằng trang gốc (chưa thấy khai thác được). Có thể chọn sop_web_attack_generic."
+data/samples/31106_4.json,,31106,6,A web attack returned code 200 (success).,raw_pool_verbatim_copy,test,True,,,,,,,,,
+data/samples/31121_1.json,,31121,4,Web server 501 error code (Not Implemented).,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31121_2.json,,31121,4,Web server 501 error code (Not Implemented).,raw_pool_sampled,dev,False,sop_web_bruteforce_scan,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"TRACK trả 501 (không hỗ trợ), nhiễu dò quét."
+data/samples/31151_1.json,,31151,10,Multiple web server 400 error codes from same source ip.,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/31151_2.json,,31151,10,Multiple web server 400 error codes from same source ip.,raw_pool_sampled,dev,True,sop_web_bruteforce_scan,,,3_trung-binh,no,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Quét liên tục (frequency 14, firedtimes 477), toàn 404. Nhãn thật=no vì là scanner tự động; BLOCK_IP theo SOP quét liên tục."
+data/samples/31151_3.json,,31151,10,Multiple web server 400 error codes from same source ip.,raw_pool_verbatim_copy,dev,False,sop_web_bruteforce_scan,,,3_trung-binh,no,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Như dòng 30.
+data/samples/31153_1.json,,31153,10,Multiple common web attacks from same source ip.,raw_pool_sampled,dev,False,sop_web_attack_generic,,,3_trung-binh,no,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Path traversal lặp lại, toàn 404 (đường dẫn trong từ điển Nikto)."
+data/samples/31153_2.json,,31153,10,Multiple common web attacks from same source ip.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31154_1.json,,31154,10,Multiple XSS (Cross Site Scripting) attempts from same source ip.,raw_pool_sampled,dev,True,sop_xss,,,3_trung-binh,no,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"XSS lặp lại, toàn 404, payload alert('Vulnerable') kiểu Nikto."
+data/samples/31154_2.json,,31154,10,Multiple XSS (Cross Site Scripting) attempts from same source ip.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31166_1.json,,31166,6,Shellshock attack attempt,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31166_2.json,,31166,6,Shellshock attack attempt,raw_pool_sampled,dev,False,sop_web_rce,,,3_trung-binh,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Thăm dò Shellshock trả 404 (không có CGI).
+data/samples/31168_1.json,,31168,15,Shellshock attack detected,raw_pool_sampled,dev,False,sop_web_rce,,,3_trung-binh,no,REVIEW_LOG,Duc,2026-10-02,"Dấu thử Shellshock kiểu Nikto, trả 200 trên trang tĩnh, chưa thấy thực thi."
+data/samples/31168_2.json,,31168,15,Shellshock attack detected,raw_pool_sampled,dev,False,sop_web_rce,,,4_trung-cao,unsure,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Như dòng 38.
+data/samples/31168_3.json,,31168,15,Shellshock attack detected,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/31516_1.json,,31516,6,Suspicious URL access.,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/31516_2.json,,31516,6,Suspicious URL access.,raw_pool_sampled,dev,False,sop_web_bruteforce_scan,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"/.history trả 404, dò quét tự động."
+data/samples/40112_1.json,,40112,12,Multiple authentication failures followed by a success.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/40112_2.json,,40112,12,Multiple authentication failures followed by a success.,raw_pool_sampled,dev,False,sop_bruteforce_success,,,4_trung-cao,unsure,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Đăng nhập thành công sau thất bại, từ .10. frequency=2 nên có thể chỉ là gõ nhầm; không đủ căn cứ để chắc là chiếm tài khoản."
+data/samples/502_1.json,,502,3,Wazuh server started.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/502_2.json,,502,3,Wazuh server started.,raw_pool_sampled,dev,False,sop_benign_activity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Wazuh server khởi động.
+data/samples/510_1.json,,510,7,Host-based anomaly detection event (rootcheck).,raw_pool_sampled,dev,False,sop_malware,,,3_trung-binh,unsure,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Chữ ký rootcheck 'Generic' trên /usr/bin/diff, thường dương tính giả; cần đối chiếu debsums."
+data/samples/510_2.json,,510,7,Host-based anomaly detection event (rootcheck).,raw_pool_sampled,dev,False,sop_malware,,,3_trung-binh,unsure,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Như dòng 47 (/bin/diff).
+data/samples/510_3.json,,510,7,Host-based anomaly detection event (rootcheck).,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/52505_1.json,,52505,7,ClamAV: Virus detected: Eicar-Test-Signature.,curated_ai_or_manual,test,False,,,,,,,,,
+data/samples/5301_1.json,,5301,5,User missed the password to change UID (user id).,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5301_2.json,,5301,5,User missed the password to change UID (user id).,raw_pool_sampled,dev,False,sop_privilege_escalation,,,2_trung-thap,unsure,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Một lần FAILED SU của user hợp lệ, theo SOP nhập sai đơn lẻ là REVIEW_LOG."
+data/samples/533_1.json,,533,7,Listened ports status (netstat) changed (new port opened or closed).,raw_pool_sampled,dev,False,sop_general,,,2_trung-thap,no,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"So với lần trước chỉ đổi cổng UDP tạm và đóng 9200/9300, Docker; không có cổng TCP mới. Không có SOP riêng nên chọn sop_general."
+data/samples/533_2.json,,533,7,Listened ports status (netstat) changed (new port opened or closed).,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5402_1.json,,5402,3,Successful sudo to ROOT executed.,raw_pool_sampled,dev,False,sop_benign_activity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,sudo tail -f auth.log bởi sansforensics.
+data/samples/5402_2.json,,5402,3,Successful sudo to ROOT executed.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5403_1.json,,5403,4,First time user executed sudo.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/550_1.json,,550,7,Integrity checksum changed.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/550_2.json,,550,7,Integrity checksum changed.,raw_pool_sampled,dev,True,sop_file_integrity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,/etc/cups/subscriptions.conf do CUPS tự ghi lại.
+data/samples/550_3.json,,550,7,Integrity checksum changed.,raw_pool_sampled,dev,False,sop_file_integrity,,,3_trung-binh,unsure,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"eicar.com trong web root (md5 trùng EICAR), mtime lùi về quá khứ. File thử AV nhưng vị trí đáng ngờ. Có thể chọn sop_malware."
+data/samples/5501_1.json,,5501,3,PAM: Login session opened.,raw_pool_sampled,dev,False,sop_benign_activity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Phiên SSH mở của user hợp lệ.
+data/samples/5501_2.json,,5501,3,PAM: Login session opened.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5502_1.json,,5502,3,PAM: Login session closed.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5502_2.json,,5502,3,PAM: Login session closed.,raw_pool_sampled,dev,False,sop_benign_activity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Phiên SSH đóng.
+data/samples/5503_1.json,,5503,5,PAM: User login failed.,raw_pool_sampled,dev,True,sop_ssh_bruteforce,,,3_trung-binh,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Một sự kiện PAM thất bại trong chuỗi (firedtimes 38) từ cùng .10.
+data/samples/5503_2.json,,5503,5,PAM: User login failed.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/553_1.json,,553,7,File deleted.,raw_pool_sampled,dev,False,sop_file_integrity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,File tạm .N của CUPS bị xoá.
+data/samples/553_2.json,,553,7,File deleted.,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/554_1.json,,554,5,File added to the system.,raw_pool_sampled,dev,False,sop_file_integrity,,,3_trung-binh,unsure,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,eicar.com được thêm vào web root; cặp với dòng 60.
+data/samples/554_2.json,,554,5,File added to the system.,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/554_3.json,,554,5,File added to the system.,raw_pool_verbatim_copy,dev,True,sop_file_integrity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,File tạm .N của CUPS được thêm.
+data/samples/5551_1.json,,5551,10,PAM: Multiple failed logins in a small period of time.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5551_2.json,,5551,10,PAM: Multiple failed logins in a small period of time.,raw_pool_sampled,dev,True,sop_ssh_bruteforce,,,4_trung-cao,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,8 lần PAM thất bại liên tiếp từ .10.
+data/samples/5710_1.json,,5710,5,sshd: Attempt to login using a non-existent user,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5710_2.json,,5710,5,sshd: Attempt to login using a non-existent user,raw_pool_sampled,dev,True,sop_ssh_bruteforce,,,3_trung-binh,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"User không tồn tại 'administrator', firedtimes=275. [rà lại: hạ mức 4→3 cho khớp dòng 76, cùng một loại sự kiện đơn lẻ]"
+data/samples/5710_3.json,,5710,5,sshd: Attempt to login using a non-existent user,raw_pool_verbatim_copy,dev,True,sop_ssh_bruteforce,,,3_trung-binh,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Cùng kiểu dòng 75, firedtimes=8."
+data/samples/5712_1.json,,5712,10,sshd: brute force trying to get access to the system. Non existent user.,raw_pool_sampled,dev,False,sop_ssh_bruteforce,,,4_trung-cao,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"Brute force user không tồn tại, level 10."
+data/samples/5712_2.json,,5712,10,sshd: brute force trying to get access to the system. Non existent user.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5715_1.json,,5715,3,sshd: authentication success.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/5758_1.json,,5758,8,Maximum authentication attempts exceeded.,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/5758_2.json,,5758,8,Maximum authentication attempts exceeded.,raw_pool_sampled,dev,False,sop_ssh_bruteforce,,,4_trung-cao,yes,BLOCK_IP,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Vượt số lần xác thực tối đa với user không tồn tại.
+data/samples/5760_1.json,,5760,5,sshd: authentication failed.,raw_pool_sampled,test,True,,,,,,,,,
+data/samples/5760_2.json,,5760,5,sshd: authentication failed.,raw_pool_sampled,dev,False,sop_ssh_bruteforce,,,2_trung-thap,unsure,REVIEW_LOG,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Một lần sai mật khẩu của user hợp lệ.
+data/samples/591_1.json,,591,3,Log file rotated.,raw_pool_sampled,dev,True,sop_benign_activity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,Log apache error được xoay vòng.
+data/samples/591_2.json,,591,3,Log file rotated.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/80730_1.json,,80730,3,Auditd: SELinux permission check.,raw_pool_sampled,test,False,,,,,,,,,
+data/samples/80730_2.json,,80730,3,Auditd: SELinux permission check.,raw_pool_sampled,dev,False,sop_benign_activity,,,1_thap,no,NO_ACTION,"Claude (nháp, chờ Duc rà soát)",2026-10-02,"AppArmor từ chối dbus của Firefox snap, nhiễu hệ thống."

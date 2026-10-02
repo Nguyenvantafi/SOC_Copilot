@@ -1,0 +1,75 @@
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+/Users/tai/Downloads/SOC_Copilot_merged/venv/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+embed_model=sentence-transformers/all-MiniLM-L6-v2 | embed_text_mode=conditions | THRESHOLD hiện tại=0.45 | số mẫu=45
+
+100200_1.json              100200  sop_port_scan               0.506  0.184 OK  (đáp án: sop_port_scan [nhãn])
+100200_lab_1.json          100200  sop_port_scan               0.506  0.184 OK  (đáp án: sop_port_scan [nhãn])
+100230_lab_1_1.json        100230  sop_privilege_escalation    0.371  0.103 OK  (đáp án: sop_privilege_escalation [nhãn])
+100230_lab_1_2.json        100230  sop_privilege_escalation    0.371  0.103 OK  (đáp án: sop_privilege_escalation [nhãn])
+2502_2.json                2502    sop_ssh_bruteforce          0.663  0.025 OK  (đáp án: sop_ssh_bruteforce [nhãn])
+30305_1.json               30305   sop_web_bruteforce_scan     0.665  0.073 OK  (đáp án: sop_web_bruteforce_scan [nhãn])
+31101_1.json               31101   sop_web_bruteforce_scan     0.470  0.065 OK  (đáp án: sop_web_bruteforce_scan [nhãn])
+31103_2.json               31103   sop_sqli                    0.505  0.026 OK  (đáp án: sop_sqli [nhãn])
+31104_2.json               31104   sop_web_attack_generic      0.457  0.076 OK  (đáp án: sop_web_attack_generic [nhãn])
+31105_2.json               31105   sop_xss                     0.361  0.267 OK  (đáp án: sop_xss [nhãn])
+31105_3.json               31105   sop_xss                     0.304  0.284 OK  (đáp án: sop_xss [nhãn])
+31106_2.json               31106   sop_xss                     0.433  0.023 OK  (đáp án: sop_xss [nhãn])
+31106_3.json               31106   sop_web_attack_generic      0.452  0.016 SAI (đáp án: sop_sqli [nhãn])
+31121_2.json               31121   sop_web_bruteforce_scan     0.558  0.086 OK  (đáp án: sop_web_bruteforce_scan [nhãn])
+31151_2.json               31151   sop_web_bruteforce_scan     0.440  0.186 OK  (đáp án: sop_web_bruteforce_scan [nhãn])
+31151_3.json               31151   sop_web_bruteforce_scan     0.436  0.174 OK  (đáp án: sop_web_bruteforce_scan [nhãn])
+31153_1.json               31153   sop_web_attack_generic      0.469  0.070 OK  (đáp án: sop_web_attack_generic [nhãn])
+31154_1.json               31154   sop_xss                     0.327  0.284 OK  (đáp án: sop_xss [nhãn])
+31166_2.json               31166   sop_web_rce                 0.499  0.031 OK  (đáp án: sop_web_rce [nhãn])
+31168_1.json               31168   sop_web_rce                 0.497  0.098 OK  (đáp án: sop_web_rce [nhãn])
+31168_2.json               31168   sop_web_rce                 0.497  0.098 OK  (đáp án: sop_web_rce [nhãn])
+31516_2.json               31516   sop_web_bruteforce_scan     0.594  0.031 OK  (đáp án: sop_web_bruteforce_scan [nhãn])
+40112_2.json               40112   sop_ssh_bruteforce          0.637  0.012 SAI (đáp án: sop_bruteforce_success [nhãn])
+502_2.json                 502     sop_benign_activity         0.554  0.075 OK  (đáp án: sop_benign_activity [nhãn])
+510_1.json                 510     sop_file_integrity          0.798  0.018 SAI (đáp án: sop_malware [nhãn])
+510_2.json                 510     sop_file_integrity          0.798  0.018 SAI (đáp án: sop_malware [nhãn])
+5301_2.json                5301    sop_privilege_escalation    0.541  0.142 OK  (đáp án: sop_privilege_escalation [nhãn])
+533_1.json                 533     sop_port_scan               0.694  0.133 SAI (đáp án: sop_general [nhãn])
+5402_1.json                5402    sop_privilege_escalation    0.682  0.023 SAI (đáp án: sop_benign_activity [nhãn])
+550_2.json                 550     sop_file_integrity          0.638  0.174 OK  (đáp án: sop_file_integrity [nhãn])
+550_3.json                 550     sop_file_integrity          0.467  0.302 OK  (đáp án: sop_file_integrity [nhãn])
+5501_1.json                5501    sop_benign_activity         0.602  0.059 OK  (đáp án: sop_benign_activity [nhãn])
+5502_2.json                5502    sop_benign_activity         0.643  0.107 OK  (đáp án: sop_benign_activity [nhãn])
+5503_1.json                5503    sop_benign_activity         0.630  0.005 SAI (đáp án: sop_ssh_bruteforce [nhãn])
+553_1.json                 553     sop_file_integrity          0.768  0.104 OK  (đáp án: sop_file_integrity [nhãn])
+554_1.json                 554     sop_file_integrity          0.669  0.122 OK  (đáp án: sop_file_integrity [nhãn])
+554_3.json                 554     sop_file_integrity          0.863  0.046 OK  (đáp án: sop_file_integrity [nhãn])
+5551_2.json                5551    sop_ssh_bruteforce          0.582  0.051 OK  (đáp án: sop_ssh_bruteforce [nhãn])
+5710_2.json                5710    sop_ssh_bruteforce          0.562  0.081 OK  (đáp án: sop_ssh_bruteforce [nhãn])
+5710_3.json                5710    sop_ssh_bruteforce          0.562  0.081 OK  (đáp án: sop_ssh_bruteforce [nhãn])
+5712_1.json                5712    sop_ssh_bruteforce          0.449  0.149 OK  (đáp án: sop_ssh_bruteforce [nhãn])
+5758_2.json                5758    sop_ssh_bruteforce          0.492  0.113 OK  (đáp án: sop_ssh_bruteforce [nhãn])
+5760_2.json                5760    sop_ssh_bruteforce          0.605  0.062 OK  (đáp án: sop_ssh_bruteforce [nhãn])
+591_1.json                 591     sop_file_integrity          0.755  0.002 SAI (đáp án: sop_benign_activity [nhãn])
+80730_2.json               80730   sop_file_integrity          0.684  0.104 SAI (đáp án: sop_benign_activity [nhãn])
+
+Có đáp án: 45/45 mẫu (từ nhãn: 45, từ rule_map: 0)
+hit@1 = 36/45 (80%) | hit@3 = 42/45 (93%)
+Khoảng cách trung bình: đúng 0.526 | sai 0.681 (càng tách xa nhau thì ngưỡng càng có ích)
+
+Ngưỡng | qua ngưỡng | trong đó SOP đúng | trong đó SOP sai
+  0.45 |    9/45    |    9              |    0
+  0.50 |   18/45    |   17              |    1
+  0.55 |   22/45    |   21              |    1
+  0.60 |   28/45    |   27              |    1
+  0.65 |   34/45    |   31              |    3
+  0.70 |   40/45    |   34              |    6
+  0.80 |   44/45    |   35              |    9
+
+Các cặp sai (rule, đáp án -> SOP được chọn): số mẫu
+  510     sop_malware -> sop_file_integrity: 2
+  31106   sop_sqli -> sop_web_attack_generic: 1
+  40112   sop_bruteforce_success -> sop_ssh_bruteforce: 1
+  533     sop_general -> sop_port_scan: 1
+  5402    sop_benign_activity -> sop_privilege_escalation: 1
+  5503    sop_ssh_bruteforce -> sop_benign_activity: 1
+  591     sop_benign_activity -> sop_file_integrity: 1
+  80730   sop_benign_activity -> sop_file_integrity: 1

@@ -1,0 +1,12 @@
+chromadb==0.4.24
+numpy<2
+sentence-transformers==3.0.1
+transformers==4.44.2
+huggingface_hub<0.26
+pydantic>=2
+pyyaml
+requests
+streamlit
+pytest
+pandas
+matplotlib

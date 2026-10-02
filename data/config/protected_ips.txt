@@ -1,0 +1,10 @@
+# Danh sách IP KHÔNG BAO GIỜ được đề xuất chặn (đọc bởi soc_copilot/config.py).
+# Mỗi dòng một IP. Nhóm phải xác nhận lại trước khi gắn tag freeze-v1.
+127.0.0.1
+::1
+10.0.0.1       # gateway mẫu (giả định)
+192.168.1.1    # gateway mẫu (giả định)
+# Hai IP dưới đây là GIẢ ĐỊNH theo data/config/protected_ips.example.txt và ca adversarial 12/13
+# (máy SOC / server nội bộ quan trọng trong lab). Sửa hoặc xoá nếu không đúng.
+192.168.26.30
+192.168.26.50
