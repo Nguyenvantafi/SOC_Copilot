@@ -1,0 +1,47 @@
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+/Users/tai/Downloads/SOC_Copilot_merged/venv/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+/Users/tai/Downloads/SOC_Copilot_merged/venv/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+Se xu ly 42 alert (split=test, model=qwen2.5:3b, mode=rag, backend=copilot).
+Phat hien 3 ket qua da co san trong data/eval_runs/qwen2.5-3b_rag_test.jsonl (tu lan chay truoc) - se bo qua.
+  [10/42] da xu ly 7, bo qua 3, loi 0 (thoi gian chay: 128.0s)
+  [20/42] da xu ly 17, bo qua 3, loi 0 (thoi gian chay: 312.8s)
+  [30/42] da xu ly 27, bo qua 3, loi 0 (thoi gian chay: 512.3s)
+  [40/42] da xu ly 37, bo qua 3, loi 0 (thoi gian chay: 670.8s)
+  [42/42] da xu ly 39, bo qua 3, loi 0 (thoi gian chay: 701.4s)
+
+Hoan tat. Xu ly moi: 39, bo qua (da co): 3, loi: 0.
+Ket qua: data/eval_runs/qwen2.5-3b_rag_test.jsonl
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+/Users/tai/Downloads/SOC_Copilot_merged/venv/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+Se xu ly 42 alert (split=test, model=qwen2.5:3b, mode=rule_map, backend=copilot).
+  [10/42] da xu ly 10, bo qua 0, loi 1 (thoi gian chay: 286.5s)
+  [20/42] da xu ly 20, bo qua 0, loi 1 (thoi gian chay: 433.7s)
+  [30/42] da xu ly 30, bo qua 0, loi 1 (thoi gian chay: 584.6s)
+  [40/42] da xu ly 40, bo qua 0, loi 1 (thoi gian chay: 702.2s)
+  [42/42] da xu ly 42, bo qua 0, loi 1 (thoi gian chay: 723.0s)
+
+Hoan tat. Xu ly moi: 42, bo qua (da co): 0, loi: 1.
+Ket qua: data/eval_runs/qwen2.5-3b_rule_map_test.jsonl
+[CANH BAO] 1 dong bi loi (xem truong 'error' trong file JSONL) - chay lai CUNG LENH nay se TU DONG thu lai cac dong loi (khong bi coi la 'da xong').
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+/Users/tai/Downloads/SOC_Copilot_merged/venv/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+Se xu ly 42 alert (split=test, model=qwen2.5:3b, mode=full_context, backend=copilot).
+  [10/42] da xu ly 10, bo qua 0, loi 0 (thoi gian chay: 473.2s)
+  [20/42] da xu ly 20, bo qua 0, loi 0 (thoi gian chay: 879.5s)
+  [30/42] da xu ly 30, bo qua 0, loi 0 (thoi gian chay: 1322.4s)
+  [40/42] da xu ly 40, bo qua 0, loi 0 (thoi gian chay: 1612.3s)
+  [42/42] da xu ly 42, bo qua 0, loi 0 (thoi gian chay: 1697.7s)
+
+Hoan tat. Xu ly moi: 42, bo qua (da co): 0, loi: 0.
+Ket qua: data/eval_runs/qwen2.5-3b_full_context_test.jsonl

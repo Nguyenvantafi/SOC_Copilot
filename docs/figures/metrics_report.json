@@ -1,7 +1,7 @@
 {
   "overall": {
-    "n_total_records": 361,
-    "n_error_or_no_parse": 47,
+    "n_total_records": 127,
+    "n_error_or_no_parse": 1,
     "n_matched_with_ground_truth": 0,
     "recommended_action_accuracy": {
       "k": 0,
@@ -23,50 +23,71 @@
       "n": 0,
       "display": "0/0 (khong co du lieu)"
     },
+    "sop_hit_at_1": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "sop_hit_at_3": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "fallback_used": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "fallback_correct": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "guard_changed_action": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "suspected_injection_flagged": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
     "latency_by_model_mode": {
-      "mock-model|full_context": {
-        "n_excl_cold_start": 74,
-        "n_incl_cold_start": 76,
-        "mean_seconds": 0.076,
-        "median_seconds": 0.078,
-        "p95_seconds": 0.098,
-        "min_seconds": 0.051,
-        "max_seconds": 0.1
+      "qwen2.5:3b|full_context": {
+        "n_excl_cold_start": 41,
+        "n_incl_cold_start": 42,
+        "mean_seconds": 40.002,
+        "median_seconds": 44.114,
+        "p95_seconds": 46.702,
+        "min_seconds": 6.793,
+        "max_seconds": 48.681
       },
-      "mock-model|none": {
-        "n_excl_cold_start": 74,
-        "n_incl_cold_start": 76,
-        "mean_seconds": 0.076,
-        "median_seconds": 0.078,
-        "p95_seconds": 0.098,
-        "min_seconds": 0.051,
-        "max_seconds": 0.1
+      "qwen2.5:3b|rag": {
+        "n_excl_cold_start": 41,
+        "n_incl_cold_start": 42,
+        "mean_seconds": 18.099,
+        "median_seconds": 17.181,
+        "p95_seconds": 30.805,
+        "min_seconds": 9.338,
+        "max_seconds": 35.422
       },
-      "mock-model|rag": {
-        "n_excl_cold_start": 74,
-        "n_incl_cold_start": 76,
-        "mean_seconds": 0.076,
-        "median_seconds": 0.078,
-        "p95_seconds": 0.098,
-        "min_seconds": 0.051,
-        "max_seconds": 0.1
-      },
-      "mock-model|rule_map": {
-        "n_excl_cold_start": 83,
-        "n_incl_cold_start": 86,
-        "mean_seconds": 0.076,
-        "median_seconds": 0.078,
-        "p95_seconds": 0.098,
-        "min_seconds": 0.051,
-        "max_seconds": 0.1
+      "qwen2.5:3b|rule_map": {
+        "n_excl_cold_start": 41,
+        "n_incl_cold_start": 42,
+        "mean_seconds": 14.732,
+        "median_seconds": 13.563,
+        "p95_seconds": 26.945,
+        "min_seconds": 5.87,
+        "max_seconds": 28.838
       }
     },
     "mismatches": []
   },
   "by_model_mode": {
-    "mock-model|full_context": {
-      "n_total_records": 87,
-      "n_error_or_no_parse": 11,
+    "qwen2.5:3b|full_context": {
+      "n_total_records": 42,
+      "n_error_or_no_parse": 0,
       "n_matched_with_ground_truth": 0,
       "recommended_action_accuracy": {
         "k": 0,
@@ -88,22 +109,52 @@
         "n": 0,
         "display": "0/0 (khong co du lieu)"
       },
+      "sop_hit_at_1": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "sop_hit_at_3": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "fallback_used": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "fallback_correct": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "guard_changed_action": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "suspected_injection_flagged": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
       "latency_by_model_mode": {
-        "mock-model|full_context": {
-          "n_excl_cold_start": 74,
-          "n_incl_cold_start": 76,
-          "mean_seconds": 0.076,
-          "median_seconds": 0.078,
-          "p95_seconds": 0.098,
-          "min_seconds": 0.051,
-          "max_seconds": 0.1
+        "qwen2.5:3b|full_context": {
+          "n_excl_cold_start": 41,
+          "n_incl_cold_start": 42,
+          "mean_seconds": 40.002,
+          "median_seconds": 44.114,
+          "p95_seconds": 46.702,
+          "min_seconds": 6.793,
+          "max_seconds": 48.681
         }
       },
       "mismatches": []
     },
-    "mock-model|none": {
-      "n_total_records": 87,
-      "n_error_or_no_parse": 11,
+    "qwen2.5:3b|rag": {
+      "n_total_records": 42,
+      "n_error_or_no_parse": 0,
       "n_matched_with_ground_truth": 0,
       "recommended_action_accuracy": {
         "k": 0,
@@ -125,22 +176,52 @@
         "n": 0,
         "display": "0/0 (khong co du lieu)"
       },
+      "sop_hit_at_1": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "sop_hit_at_3": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "fallback_used": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "fallback_correct": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "guard_changed_action": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "suspected_injection_flagged": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
       "latency_by_model_mode": {
-        "mock-model|none": {
-          "n_excl_cold_start": 74,
-          "n_incl_cold_start": 76,
-          "mean_seconds": 0.076,
-          "median_seconds": 0.078,
-          "p95_seconds": 0.098,
-          "min_seconds": 0.051,
-          "max_seconds": 0.1
+        "qwen2.5:3b|rag": {
+          "n_excl_cold_start": 41,
+          "n_incl_cold_start": 42,
+          "mean_seconds": 18.099,
+          "median_seconds": 17.181,
+          "p95_seconds": 30.805,
+          "min_seconds": 9.338,
+          "max_seconds": 35.422
         }
       },
       "mismatches": []
     },
-    "mock-model|rag": {
-      "n_total_records": 87,
-      "n_error_or_no_parse": 11,
+    "qwen2.5:3b|rule_map": {
+      "n_total_records": 43,
+      "n_error_or_no_parse": 1,
       "n_matched_with_ground_truth": 0,
       "recommended_action_accuracy": {
         "k": 0,
@@ -162,52 +243,45 @@
         "n": 0,
         "display": "0/0 (khong co du lieu)"
       },
-      "latency_by_model_mode": {
-        "mock-model|rag": {
-          "n_excl_cold_start": 74,
-          "n_incl_cold_start": 76,
-          "mean_seconds": 0.076,
-          "median_seconds": 0.078,
-          "p95_seconds": 0.098,
-          "min_seconds": 0.051,
-          "max_seconds": 0.1
-        }
-      },
-      "mismatches": []
-    },
-    "mock-model|rule_map": {
-      "n_total_records": 100,
-      "n_error_or_no_parse": 14,
-      "n_matched_with_ground_truth": 0,
-      "recommended_action_accuracy": {
+      "sop_hit_at_1": {
         "k": 0,
         "n": 0,
         "display": "0/0 (khong co du lieu)"
       },
-      "is_true_positive_accuracy": {
+      "sop_hit_at_3": {
         "k": 0,
         "n": 0,
         "display": "0/0 (khong co du lieu)"
       },
-      "severity_exact_match": {
+      "fallback_used": {
         "k": 0,
         "n": 0,
         "display": "0/0 (khong co du lieu)"
       },
-      "severity_within_1_bucket": {
+      "fallback_correct": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "guard_changed_action": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "suspected_injection_flagged": {
         "k": 0,
         "n": 0,
         "display": "0/0 (khong co du lieu)"
       },
       "latency_by_model_mode": {
-        "mock-model|rule_map": {
-          "n_excl_cold_start": 83,
-          "n_incl_cold_start": 86,
-          "mean_seconds": 0.076,
-          "median_seconds": 0.078,
-          "p95_seconds": 0.098,
-          "min_seconds": 0.051,
-          "max_seconds": 0.1
+        "qwen2.5:3b|rule_map": {
+          "n_excl_cold_start": 41,
+          "n_incl_cold_start": 42,
+          "mean_seconds": 14.732,
+          "median_seconds": 13.563,
+          "p95_seconds": 26.945,
+          "min_seconds": 5.87,
+          "max_seconds": 28.838
         }
       },
       "mismatches": []

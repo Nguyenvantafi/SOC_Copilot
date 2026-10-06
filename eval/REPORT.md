@@ -2,9 +2,6 @@
 
 **Nhac lai nguyen tac bao cao (checklist D4/D6)**: du lieu tu MOT lab, mau nho -> moi con so bao cao dang k/n kem khoang tin cay Wilson (xem `docs/figures/metrics_report.md`), KHONG khai quat ra ngoai pham vi du lieu nay. Ket qua AM TINH (vd mode nao do khong tot hon mode khac) VAN duoc bao cao trung thuc ben duoi, khong bi bo qua.
 
-> ## ⚠️ SỐ LIỆU DƯỚI ĐÂY SINH TỪ BACKEND `mock` (DỮ LIỆU GIẢ) - KHÔNG DÙNG TRONG BÁO CÁO
-> Chỉ chạy lại sau khi có nhãn thật và kết quả từ `--backend copilot`.
-
 > ## ⚠️ CHUA CO NHAN THAT
 > `data/labels.csv` hien chua co dong nao duoc Duc/Binh gan nhan, nen TOAN BO metric ben duoi deu la `0/0`. Day la trang thai DUNG (khong bia so), khong phai loi. File nay se TU DONG co so lieu that khi chay lai (`python3 eval/metrics.py ... && python3 eval/report.py ...`) sau khi lao dong gan nhan (D3, phan phu thuoc nguoi khac) hoan tat.
 
@@ -17,10 +14,9 @@
 
 | model\|mode | tong dong | loi/khong parse | khop hanh dong | khop TP/FP | severity dung | severity lech<=1 |
 |---|---:|---:|---|---|---|---|
-| mock-model|full_context | 87 | 11 | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) |
-| mock-model|none | 87 | 11 | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) |
-| mock-model|rag | 87 | 11 | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) |
-| mock-model|rule_map | 100 | 14 | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) |
+| qwen2.5:3b|full_context | 42 | 0 | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) |
+| qwen2.5:3b|rag | 42 | 0 | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) |
+| qwen2.5:3b|rule_map | 43 | 1 | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) | 0/0 (khong co du lieu) |
 
 ## 10 ca sai nang nhat + goi y nguyen nhan goc
 
